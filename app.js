@@ -21,7 +21,7 @@ function load(){try{return JSON.parse(localStorage.getItem(STORE))||structuredCl
 function save(d){localStorage.setItem(STORE,JSON.stringify(d))}
 function money(n,c){return new Intl.NumberFormat(document.documentElement.lang==="en"?"en-US":"ar-IQ",{maximumFractionDigits:2}).format(n)+" "+c}
 function countryName(id){const c=countries.find(x=>x.id===id);return c?c.ar:""}
-function logo(){return `<svg viewBox="0 0 64 64" aria-label="ماسة الشام"><path d="M10 25 20 12h24l10 13-22 29z" fill="none" stroke="#caa24d" stroke-width="3"/><path d="m10 25 22 29 22-29M20 12l12 42 12-42M10 25h44" fill="none" stroke="#e4c875" stroke-width="1.5"/><path d="M4 32h12M48 32h12" stroke="#caa24d" stroke-width="2"/></svg>`}
+function logo(){return `<img class="brand-logo" src="assets/masa-alsham-logo.jpg" alt="شعار ماسة الشام للحوالات المالية">`}
 function header(){return `<div class="topbar"><div class="container"><span>ماسة الشام للحوالات المالية · بغداد، العراق</span><span>الهاتف وWhatsApp: +9647772073950</span></div></div>
 <nav class="nav"><div class="container navin"><a class="brand" href="#home">${logo()}<span>ماسة الشام<small>Masa Al-Sham Financial Transfers</small></span></a>
 <div class="links"><a href="#home">الرئيسية</a><a href="#about">من نحن</a><a href="#services">خدماتنا</a><a href="#countries">الدول</a><a href="#calculator">حاسبة الحوالات</a><a href="#send">إرسال حوالة</a><a href="#track">تتبع حوالتي</a><a href="#faq">الأسئلة الشائعة</a><a href="#contact">تواصل معنا</a></div>
